@@ -3,7 +3,10 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const methodOverride = require('method-override');
+const trackRoutes = require('./routes/tracks');
 const app = express();
+
+app.use(trackRoutes);
 
 // Middleware
 app.use(cors());
